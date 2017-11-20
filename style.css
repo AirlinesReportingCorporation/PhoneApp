@@ -1,0 +1,125 @@
+
+	body  {
+		font-family: "Roboto Slab";
+		font-weight: 400;
+	}
+	strong{
+		font-weight: 700;
+	}
+	.h1, .h2, .h3, .h4, .h5, .h6, h1, h2, h3, h4, h5, h6 {
+			margin-bottom: .75rem;
+			font-family: "Source Sans Pro", Poppins,-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;
+			font-weight: 700;
+			color: #555555;
+	}
+	.nav, .btn, label, .breadcrumb{
+		font-family: "Source Sans Pro";
+	}
+	.nav{
+		
+		color: #fff;
+	}
+	.nav-item a{
+		font-family: "Source Sans Pro", Poppins,-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;
+		text-transform: uppercase;
+		font-weight: 700;
+	}
+	.btn{
+		text-transform: uppercase;
+	}
+	.btn-primary{
+		background: #189bb0;
+		border-color: #189bb0;
+	}
+	.custom-select{
+		width: 100%;
+	}
+	.jumbotron{
+		    background-image: url(https://www2.arccorp.com/globalassets/support--training/carrier-support/carriersupport_jumbotronstandard_1400x483.jpg);
+    background-size: cover;
+		color: #fff;
+		margin-bottom: 0;
+		text-align: center;
+		padding-top: 100px;
+		padding-bottom: 100px;
+	}
+	.jumbotron h1{
+		color: #fff;
+		
+	}
+	.btn-success{
+		background: #189bb0;
+		border-color: #189bb0;
+	}
+	h3{
+		color: #189bb0;
+	}
+	
+	input, select{
+		margin-bottom:10px;
+	}
+	
+	nav{
+		box-shadow: 0 0px 6px 0px #999;
+		
+	}
+	.bg-light{
+		background: #ffffff !important;
+	}
+	.search-group{
+		border-right: 1px solid #ddd;
+	}
+	
+	.employeeResults .row{
+		padding-right: 20px; 
+		padding-left: 20px;
+	}
+	
+	.container-fluid{
+		padding-left: 0;
+		padding-right: 0;
+	}
+	.breadcrumb{
+		background: transparent;
+		padding: 0;
+	}
+	.employeeLocation{
+		font-family: "Source Sans Pro";
+		text-transform: uppercase;
+	}
+	.employeeHeader{
+		font-family: "Source Sans Pro";
+		text-transform: uppercase;
+		font-weight: 700;
+		margin-bottom:10px;
+	}
+	.sep{
+		border-bottom: 4px #189bb0 solid;
+		width: 50px;
+		margin: 15px auto;
+	}
+	.employeeBlock{
+		padding: 10px 0;
+	}
+	footer{
+		background: #189bb0;
+		padding:50px 20px;
+	}
+	.form-group{
+		margin-bottom: 0;
+	}
+	.employeeSearchBlock{
+		background: #ffffff; 
+		padding:20px; 
+		margin-bottom:20px; 
+		font-family: 'Source Sans Pro';
+		border: #ddd 1px solid;
+
+	}
+	.employeeSearchBlock h4{
+		margin-bottom: 0;
+	}
+	
+	label{
+		font-weight: 700;
+	}

@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+<link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,700" rel="stylesheet" /><link href="https://fonts.googleapis.com/css?family=Roboto+Slab:400,700" rel="stylesheet" />
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/shards-ui@1.1.1/dist/css/shards.min.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <a class="navbar-brand" href="#">
+    <img src="https://www2.arccorp.com/globalassets/email/logoEmail.png" class="d-inline-block align-top" alt="">
+  </a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarNav">
+    <ul class="navbar-nav">
+      <li class="nav-item active">
+        <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">Flex Time Schedule</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">Full Directory</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">Conference Rooms</a>
+      </li>
+			<li class="nav-item">
+        <a class="nav-link" href="#">Departments</a>
+      </li>
+    </ul>
+  </div>
+</nav>
+
+<div class="container-fluid" id="phoneApp">
+
+	<div class="row no-gutters">
+		<div class="col-md-9">	
+			<div class="search-group form-group">
+				<div style="padding: 20px 50px;">
+				
+					<div class="row">
+						<div class="col-md-12">
+							<div class="breadcrumb">home / Employee Directory</div>
+							<h2>Employee Directory </h2>
+						</div>
+					</div>
+
+					<div class="row">
+						
+						<div class="col-md-6">
+
+							<label for="form1-name" class="col-form-label">First Name</label>
+							<input type="text" class="form-control" id="form1-name" placeholder="First Name">
+							
+							<label for="form1-name" class="col-form-label">Location</label><br/>
+							<select class="custom-select" tabindex="3" name="locnList" id="locnList">
+								<option value="" title="">All Locations</option>
+
+								<option value="1">Arlington</option>
+
+								<option value="6">Field Staff</option>
+
+								<option value="2">Louisville</option>
+
+								<option value="4">San Juan</option>
+
+								<option value="5">Tampa</option>
+
+							</select>	
+							<br/><br/>
+					
+					<button type="button" class="btn btn-primary btn-md">Search</button>
+							
+						</div>
+						<div class="col-md-6">
+							<label for="form1-name" class="col-form-label">Last Name</label>
+							<input type="text" class="form-control" id="form1-name" placeholder="Last Name">
+
+							<label for="form1-name" class="col-form-label">Department</label><br/>
+					<select class="custom-select" tabindex="4" name="deptList" id="deptList">
+									<option value="" title="">All Departments</option>
+
+									<option value="210">Account Management</option>
+
+									<option value="700">Accounting/FP&amp;A</option>
+
+									<option value="634">Accreditation</option>
+
+									<option value="660">Agency Compl &amp; Fraud Prev</option>
+
+									<option value="645">Agency Data Prod &amp; Servs</option>
+
+									<option value="861">Business Product Dev</option>
+
+									<option value="235">Caribbean Operations</option>
+
+									<option value="520">Carrier Data Prod &amp; Servs</option>
+
+									<option value="703">Carrier Participation</option>
+
+									<option value="215">Contract Administration</option>
+
+									<option value="570">Corporate Communications</option>
+
+									<option value="120">Corporate Security</option>
+
+									<option value="470">Corporate Systems</option>
+
+									<option value="642">Credit Card Services</option>
+
+									<option value="640">Cust Exp &amp; Agency Anal</option>
+
+									<option value="230">Customer Care Center</option>
+
+									<option value="511">Data Administration</option>
+
+									<option value="440">Data Center</option>
+
+									<option value="460">Data Services</option>
+
+									<option value="646">Emerging Mkts Dta Prd&amp;Srv</option>
+
+									<option value="450">Enterprise Architecture</option>
+
+									<option value="100">Executive Office</option>
+
+									<option value="303">Human Resources</option>
+
+									<option value="600">Legal Services</option>
+
+									<option value="218">Marketing</option>
+
+									<option value="216">Meeting &amp; Events</option>
+
+									<option value="121">Network Operations</option>
+
+									<option value="540">Product Marketing</option>
+
+									<option value="810">Production Support</option>
+
+									<option value="150">Program Management Office</option>
+
+									<option value="217">Sales</option>
+
+									<option value="441">Settlement &amp; Distribution</option>
+
+									<option value="702">Settlement Operations</option>
+
+									<option value="632">Settlement Products</option>
+
+									<option value="850">Software Qlty Assurance</option>
+
+									<option value="400">Technology Services</option>
+
+					</select>
+							
+						</div>
+					</div>
+				</div>
+				<div style="border-bottom: 1px solid #ddd"></div>
+				<div style="background: #f6f6f6; padding:50px;">
+				<h3>Search Results</h3>
+				
+				
+				<div v-for="employee in employees " class="employeeSearchBlock">			
+					<div class="row">
+						<div class="col-sm-3">
+							<h4>{{ employee.firstName }} {{ employee.lastName }}</h4>
+							{{ employee.department }}<br/>
+							{{ employee.location }} - {{ employee.floor }} Floor
+						</div>
+						<div class="col-sm-3">
+							<i class="material-icons">home</i> {{ employee.roomNumber }}<br/>
+							<i class="material-icons">phone</i> {{ employee.phoneNumber }}<br/>
+							<i class="material-icons">email</i> <a href="mailto:test@test.com">{{ employee.email }}</a><br/>
+						</div>
+						<div class="col-md-3">
+							<strong>Teleworking</strong><br/>
+							<span v-for="day in employee.teleworking">
+							<span class="badge badge-secondary">{{day}}</span>&nbsp;
+							</span><br/>
+							<i class="material-icons">phone</i> {{ employee.teleworkingPhone }}
+						</div>
+						
+						<div class="col-md-3">
+							<button type="button" class="btn btn-primary btn-md" v-on:click="showEmployee( employee.empId )">View More</button>
+						</div>
+					</div>
+				</div>	
+				
+
+				</div>
+				
+			</div>
+			
+		</div>
+		
+		<div v-if="employeeDetails" class="col-sm-3">
+			<div class="employeeView form-group" style="padding: 40px 50px; text-align: center;">
+				<h2>{{ employeeDetailsArray.firstName }} {{ employeeDetailsArray.lastName }}</h2>
+				{{ employeeDetailsArray.department }}<br/><br/>
+				
+				<div class="employeeLocation employeeBlock">
+					<strong>{{ employeeDetailsArray.location }}</strong><br/>
+					{{ employeeDetailsArray.floor }} Floor<br/>
+					{{ employeeDetailsArray.roomNumber }}<br/><br/>
+					<button type="button" class="btn btn-primary btn-md">View Map</button>
+				</div>
+				<div class="sep"></div>
+				
+				<div class="employeeBlock">
+					<div class="employeeHeader">Contact Information</div>
+					
+					<i class="material-icons">phone</i> {{ employeeDetailsArray.phoneNumber }}<br/>
+					
+					<i class="material-icons">email</i> {{ employeeDetailsArray.email }}<br/>
+				</div>
+				
+				<div class="sep"></div>
+				
+				<div class="employeeBlock">
+					<div class="employeeHeader">Teleworking</div>
+					<span v-for="day in employeeDetailsArray.teleworking">
+							<span class="badge badge-secondary">{{day}}</span>&nbsp;
+							</span><br/>
+					<i class="material-icons">phone</i> {{ employeeDetailsArray.teleworkingPhone }}<br/>
+				</div>
+			
+			</div>
+		</div>
+	</div>
+
+	<footer>
+	<div class="row">
+		<div class="col-md-12">
+		
+	</div>
+	</footer>
+	
+</div>
+
+
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js" integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/vue"></script>
+<script src="scripts.js"></script>
+</body>
+</html>
